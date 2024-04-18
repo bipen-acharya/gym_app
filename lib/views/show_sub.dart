@@ -66,6 +66,7 @@ class SubscriptionDetailScreen extends StatelessWidget {
                                 const SizedBox(
                                   height: 14,
                                 ),
+                                
                                 CalculationRow(
                                   title: 'Total Days ',
                                   calculation: c
