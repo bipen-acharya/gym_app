@@ -57,7 +57,7 @@ class SingleTrainerScreen extends StatelessWidget {
                       const Center(child: CircularProgressIndicator()),
                   fit: BoxFit.fill,
                   height: Get.height / 2.5,
-                  imageUrl: trainers.image ?? "",
+                  imageUrl: trainers.photo ?? "",
                   errorWidget: (context, url, error) => Image.asset(
                     'assets/common/logo.png',
                     height: MediaQuery.of(context).size.height / 2.7,
@@ -106,7 +106,7 @@ class SingleTrainerScreen extends StatelessWidget {
                               color: AppColors.blueColor),
                         ),
                         Text(
-                          trainers.name!,
+                          trainers.name ?? "",
                           style: CustomTextStyles.f14W400(),
                         ),
                       ],
@@ -119,7 +119,7 @@ class SingleTrainerScreen extends StatelessWidget {
                               color: AppColors.blueColor),
                         ),
                         Text(
-                          trainers.email!,
+                          trainers.email ?? "",
                           style: CustomTextStyles.f14W400(),
                         ),
                       ],
@@ -127,12 +127,12 @@ class SingleTrainerScreen extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "Contact :",
+                          "Experience :",
                           style: CustomTextStyles.f16W400(
                               color: AppColors.blueColor),
                         ),
                         Text(
-                          trainers.dob!,
+                          trainers.experience!,
                           style: CustomTextStyles.f14W400(),
                         ),
                       ],
@@ -148,7 +148,7 @@ class SingleTrainerScreen extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      trainers.email!,
+                      trainers.costPerMonth ?? "",
                       style: CustomTextStyles.f16W400(),
                     ),
                     const SizedBox(
@@ -162,7 +162,7 @@ class SingleTrainerScreen extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      "INCREASED CORE STABILITY: One of the primary benefits of a weightlifting belt is increased core INCREASED CORE STABILITY: One of the primary benefits of a weightlifting belt is increased core ",
+                      trainers.description ?? "",
                       style: CustomTextStyles.f14W400(),
                     ),
                   ],

@@ -10,9 +10,12 @@ class Trainers {
   String? gender;
   String? dob;
   int? userRole;
-  String? image;
   String? createdAt;
   String? updatedAt;
+  String? description;
+  String? costPerMonth;
+  String? experience;
+  String? photo;
 
   Trainers({
     this.id,
@@ -21,10 +24,13 @@ class Trainers {
     this.emailVerifiedAt,
     this.gender,
     this.dob,
-    this.image,
     this.userRole,
     this.createdAt,
     this.updatedAt,
+    this.description,
+    this.costPerMonth,
+    this.experience,
+    this.photo,
   });
 
   Trainers.fromJson(Map<String, dynamic> json) {
@@ -32,12 +38,16 @@ class Trainers {
     name = json['name'];
     email = json['email'];
     emailVerifiedAt = json['email_verified_at'];
-    image = json['image'];
     gender = json['gender'];
     dob = json['dob'];
     userRole = json['user_role'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
+    description = json['description'];
+    costPerMonth = json['cost_per_month'];
+    experience = json['experience'];
+
+    photo = json['photo'];
   }
 
   Map<String, dynamic> toJson() {
@@ -45,13 +55,17 @@ class Trainers {
     data['id'] = id;
     data['name'] = name;
     data['email'] = email;
-    data['image'] = image;
     data['email_verified_at'] = emailVerifiedAt;
     data['gender'] = gender;
     data['dob'] = dob;
     data['user_role'] = userRole;
     data['created_at'] = createdAt;
     data['updated_at'] = updatedAt;
+    data['description'] = description;
+    data['cost_per_month'] = costPerMonth;
+    data['experience'] = experience;
+
+    data['photo'] = photo;
 
     return data;
   }

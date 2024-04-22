@@ -280,8 +280,7 @@ class PersonalTrainerCard extends StatelessWidget {
                     placeholder: (context, url) =>
                         const Center(child: CircularProgressIndicator()),
                     fit: BoxFit.fill,
-                    imageUrl:
-                        "https://upload.wikimedia.org/wikipedia/commons/9/9f/Mali_-_Bozo_girl_in_Bamako.jpg",
+                    imageUrl: trainer.photo ?? "",
                     errorWidget: (context, url, error) => Image.asset(
                       'assets/common/logo.png',
                       fit: BoxFit.fill,
